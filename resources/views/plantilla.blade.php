@@ -22,17 +22,17 @@
         <header>
             <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="{{route('welcome')}}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQntLbDieNmfnNwUYPDmdvfyqxxVVwa8vMFvw&s" alt="Lobtuf grid" height="24" width="30">
+                  <a class="navbar-brand" href="{{route('vistaJugar')}}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQntLbDieNmfnNwUYPDmdvfyqxxVVwa8vMFvw&s" alt="Lobtuf grid" height="24" width="30">
                     Lobtuf</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarsExample04">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                      <li class="nav-item">
-                        <a class="nav-link" href="{{route('vistaLogin')}}">Iniciar Sesion</a>
-                      </li>
-                    </ul>                  
+                    </ul>
+                    @auth
+                        {{Auth::user()->email}}
+                    @endauth                  
                   </div>
                 </div>
               </nav>

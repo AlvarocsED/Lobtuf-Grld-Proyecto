@@ -16,11 +16,12 @@
           <div class="row gy-5 justify-content-center">
             <div class="col-12 col-lg-5">
               <form action="{{route('validarLogin')}}" method="POST">
+                @csrf
                 <div class="row gy-3 overflow-hidden">
                   <div class="col-12">
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control border-0 border-bottom rounded-0" name="username" id="username" placeholder="" required>
-                      <label for="username" class="form-label">Nombre de Usuario o Email</label>
+                      <input type="text" class="form-control border-0 border-bottom rounded-0" name="email" id="email" placeholder="" required>
+                      <label for="email" class="form-label">Nombre de Usuario o Email</label>
                     </div>
                   </div>
                   <div class="col-12">
@@ -43,7 +44,10 @@
                   </div>
                   <div class="col-12">
                     <div class="d-grid">
-                      <button class="btn btn-lg btn-dark rounded-0 fs-6" type="submit">Iniciar Sesión</button>
+                      <button class="btn btn-lg btn-dark rounded-0 fs-6" type="submit" name="inicioS">Iniciar Sesión</button>
+                      <div class="alert alert-primary" role="alert">
+                        Para jugar <a href="{{route('vistaRegistro')}}">Registrate</a>
+                      </div>
                     </div>
                   </div>
                 </div>

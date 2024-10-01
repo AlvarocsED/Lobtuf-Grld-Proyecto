@@ -9,8 +9,6 @@
                 <div class="card-body">
                   <h5 class="card-title">Lobtuf Grid</h5>
                   <p class="card-text">¿Eres capaz de adivinar todos los jugadores con estas pistas?</p>
-                  <div class="alert alert-primary" role="alert">
-                    Para jugar <a href="{{route('vistaRegistro')}}">Registrate</a>
                   </a>
                   </div>
                 </div>

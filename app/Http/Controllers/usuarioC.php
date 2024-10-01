@@ -1,7 +1,8 @@
 <?php
 
-namespace app\Http\Controllers;
+namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -15,19 +16,20 @@ class UsuarioC extends Controller
     function validarLogin(Request $request){
         //VAlidar si rellena email y constraseña
         $request->validate([
-             "username"=>"required",
-             "password"=>"requlired"
+             "email"=>"required",
+             "password"=>"required"
         ]);
-        $credenciales=["username"->$request->email,
-        "password"->$request->passwoord];
+        $credenciales=["email"=>$request->email,
+        "password"=>$request->password];
         $recordar=$request->has("recordar");
         if (Auth :: attempt($credenciales, $recordar)) {
             $request->session()->regenerate();
-            return redirect()->intended("lobtuf");
+            return redirect(route('vistaJugar'));
         }
         else{
             return back()->with("mensaje", "Email o contraseña no válido");
         }
+        
     }
     function vistaRegistro(){
         return view('login/vistaRegistro');

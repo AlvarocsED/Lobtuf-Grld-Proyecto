@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JuegoC;
 use App\Http\Controllers\UsuarioC;
 use Illuminate\Support\Facades\Route;
 
@@ -15,13 +16,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+    return view('jugar/vistaJugar');
+});
 Route::controller(UsuarioC::class)->group(
     function(){
         Route::get('login', 'vistaLogin')->name('vistaLogin');
         Route::post('login', 'validarLogin')->name('validarLogin');
         Route::get('registro', 'vistaRegistro')->name('vistaRegistro');
         Route::post('registro', 'crearUsuario')->name('crearUsuario');
+    }
+);
+Route::controller(JuegoC::class)->group(
+    function(){
+        Route::get('jugar', 'vistaJugar')->name('vistaJugar');
     }
 );
