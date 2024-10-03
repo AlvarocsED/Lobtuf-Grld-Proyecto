@@ -29,10 +29,20 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarsExample04">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                    </ul>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown08" data-bs-toggle="dropdown" aria-expanded="false">
                     @auth
                         {{Auth::user()->email}}
-                    @endauth                  
+                    @endauth
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                                <li><a href="{{route('login')}}" type="button" class="close link-underline link-underline-opacity-0 text-light" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                Cerrar sesión
+                                </a></li>
+                            </ul>    
+                        </li>
+                </ul>    
                   </div>
                 </div>
               </nav>

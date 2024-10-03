@@ -51,10 +51,14 @@ class UsuarioC extends Controller
             Auth::login($u);
             return redirect(route("vistaLogin"));
            }
-           else{
+           else{    
             return back()->with("mensaje", "Se ha producido un error en el registro");
            }
-           
-           
+           function salir(Request $request){
+            Auth::logout();     
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+            return redirect(route('login'));
+           }
     }
 }
