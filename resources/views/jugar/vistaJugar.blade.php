@@ -15,14 +15,32 @@
               <a href="#" class="btn btn-success btn-lg">Jugar</a>
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+              <div class="border-bottom border-dark">
+                <h1 class="display-6 text-center">Historial de partidas 
+                </h1>
+              </div>
               <div class="table-responsive">
-                <table class="table table-responsive table-bordered border-primary">
+                <table class="table table-responsive table-borderless">
                       <thead>
                         <tr class="table-active">
-                                                                                                                                              
+                          <th scope="col" width="5%"><input type="checkbox" class="form-check-input"></th>
+                          <th scope="col" width="45%">Partida</th>
+                          <th scope="col" width="50%">Puntuacion</th>                                                      
                         </tr>
                       </thead>
+                      <tbody>
+                        <tr class="table-active">
+                          <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                          <td>Ejemplo partida 1</td>
+                          <td>90</td>
+                        </tr>
+                      </tbody>
                 </table>
+              </div>
+            </div>
+            <div class="col-xl-2 col-xxl-2">
+              <div class="d-none d-xl-block">
+                <img src="{{asset('img/jugar/ney.jpg')}}" alt="Neymar" width="250 ">
               </div>
             </div>
           </div>
