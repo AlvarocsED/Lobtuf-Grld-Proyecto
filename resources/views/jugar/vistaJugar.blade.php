@@ -11,7 +11,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-grif">
               <a href="#" class="btn btn-success btn-lg">Jugar</a>
             </div>
             <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
