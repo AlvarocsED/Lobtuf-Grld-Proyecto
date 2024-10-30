@@ -36,7 +36,7 @@
                     @endauth
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdown08">
-                                <li><a href="{{route('login')}}" type="button" class="close link-underline link-underline-opacity-0" aria-label="Close">
+                                <li><a href="{{route('vistaLogin')}}" type="button" class="close link-underline link-underline-opacity-0" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 Cerrar sesión
                                 </a></li>
