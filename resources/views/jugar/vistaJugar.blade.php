@@ -8,13 +8,11 @@
                 <div class="card-body">
                   <h5 class="card-title">Lobtuf Grid</h5>
                   <p class="card-text">¿Eres capaz de adivinar todos los jugadores con estas pistas?</p>
+                  <a href="#" class="btn btn-success btn-lg d-grid">Jugar</a>   
                 </div>
               </div>
             </div>
-            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 d-grif">
-              <a href="#" class="btn btn-success btn-lg">Jugar</a>
-            </div>
-            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
+            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-8 col-xxl-8">
               <div class="border-bottom border-dark">
                 <h1 class="display-6 text-center">Historial de partidas 
                 </h1>
@@ -36,11 +34,6 @@
                         </tr>
                       </tbody>
                 </table>
-              </div>
-            </div>
-            <div class="col-xl-2 col-xxl-2">
-              <div class="d-none d-xl-block">
-                <img src="{{asset('img/jugar/ney.jpg')}}" alt="Neymar" width="250 ">
               </div>
             </div>
           </div>
