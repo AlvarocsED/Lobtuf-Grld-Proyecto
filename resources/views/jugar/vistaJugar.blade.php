@@ -8,7 +8,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Lobtuf Grid</h5>
                   <p class="card-text">¿Eres capaz de adivinar todos los jugadores con estas pistas?</p>
-                  <a href="#" class="btn btn-success btn-lg d-grid">Jugar</a>   
+                  <a href="#" class="btn btn-success btn-lg d-grid">Jugar</a>       
                 </div>
               </div>
             </div>

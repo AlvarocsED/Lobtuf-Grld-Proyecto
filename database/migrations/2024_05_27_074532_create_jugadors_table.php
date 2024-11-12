@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('posicion');
             $table->string('apellido');
             $table->string('nombre');
+            $table->string('foto');
             $table->foreignId('bandera_id')->constrained()->onUpdate('cascade')->onDelete('restrict');
         });
     }
