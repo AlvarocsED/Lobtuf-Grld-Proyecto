@@ -17,10 +17,11 @@ insert into equipos values
 (null,curdate(),curdate(),'Sporting Portugal','Spoting_Lisboa.png');
 
 insert into jugadors values 
-(null,curdate(),curdate(),20000330, 'Delantero', 'Younes', 'Amin', 
-				(select id from banderas where pais='Marruecos'  limit 1), 'Amin_Younes.png'),
-                
-                
+(null,curdate(),curdate(),19930806, 'Lateral Izquierdo', 'Younes', 'Amin', 
+				(select id from banderas where pais='Alemania'  limit 1), 'Amin_Younes.png'),
+(null,curdate(),curdate(),19980402,'Portero','Onana','André',
+				(select id from banderas where pais='Camerun' limit 1),'Andre_Onana.png'),
+(null,curdate(),curdate(),20000224,
 (null,curdate(),curdate(),20000330, 'Delantero', 'Sébastien', 'Haller', 
 				(select id from banderas where pais='Costa_De_Marfil'  limit 1), 'Sebastien_Haller.png');                
 
