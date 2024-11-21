@@ -61,4 +61,7 @@ class UsuarioC extends Controller
             return redirect(route('login'));
            }
     }
+    function vistaJuegoFinal(){
+        return view('jugar/vistaJuegoFinal');
+    }
 }

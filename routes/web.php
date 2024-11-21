@@ -24,7 +24,7 @@ Route::controller(UsuarioC::class)->group(
         Route::post('login', 'validarLogin')->name('validarLogin');
         Route::get('registro', 'vistaRegistro')->name('vistaRegistro');
         Route::post('registro', 'crearUsuario')->name('crearUsuario');
-        Route::post('juego', 'juegoFinal')->name('vistaJuegoFinal');
+        Route::get('juego', 'vistaJuegoFinal')->name('vistaJuegoFinal');
     }
 );
 Route::controller(JuegoC::class)->group(
