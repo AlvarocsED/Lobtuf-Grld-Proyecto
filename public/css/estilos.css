@@ -1,3 +1,15 @@
 body{
     height: 100vh;  
 }
+.banderas{
+    width: 100px;
+    height: 60px;
+}
+.escudos{
+    width: 200px;
+    height: 200px;
+}
+.jugadores{
+    width: 200px;
+    height: 200px;
+}
