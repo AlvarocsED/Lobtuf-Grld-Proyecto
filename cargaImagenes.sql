@@ -14,4 +14,27 @@ insert into banderas values
 (13,curdate(),curdate(),'Francia','Francia.png'),
 (14,curdate(),curdate(),'Gales','Gales.png'),
 (15,curdate(),curdate(),'Ghana','Ghana.png'),
-(16,curdate(),curdate(),'Inglaterra','Inglaterra.png')
+(16,curdate(),curdate(),'Inglaterra','Inglaterra.png'),
+(17,curdate(),curdate(),'Irlanda','Irlanda.png'),
+(18,curdate(),curdate(),'Italia','Italia.png'),
+(19,curdate(),curdate(),'Marruecos','Marruecos.png'),
+(20,curdate(),curdate(),'Mexico','Mexico.png'),
+(21,curdate(),curdate(),'Noruega','Noruega.png'),
+(22,curdate(),curdate(),'Paises Bajos','Paises_Bajos.png'),
+(23,curdate(),curdate(),'Polonia','Polonia.png'),
+(24,curdate(),curdate(),'Portugal','Portugal.png'),
+(25,curdate(),curdate(),'Senegal','Senegal.png'),
+(26,curdate(),curdate(),'Serbia','Serbia.png'),
+(27,curdate(),curdate(),'Suecia','Suecia.png'),
+(28,curdate(),curdate(),'Suiaa','Suiaa.png'),
+(29,curdate(),curdate(),'Turquia','Turquia.png'),
+(30,curdate(),curdate(),'Ucrania','Ucrania.png'),
+(31,curdate(),curdate(),'Uruguay','Uruguay.png');
+
+
+
+insert into equipos values
+(1,curdate(),curdate(),'AC Milan','AC_Milan.png'),
+(2,curdate(),curdate(),'AFC Ajax','AFC_Ajax,png'),
+(3,curdate(),curdate(),'Arsenal','Arsenal.png'),
+(4,curdate(),curdate(),'Atletico de Madrid','Atletico.png'),
