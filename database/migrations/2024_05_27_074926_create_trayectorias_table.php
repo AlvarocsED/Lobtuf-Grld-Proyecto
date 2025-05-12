@@ -20,8 +20,9 @@ return new class extends Migration
             $table->date('fechaF');
             $table->string('foto');
             $table->integer('titulos');
+            $table->string('alias');
             $table->foreignId('equipo_id')->constrained()->onUpdate('cascade')->onDelete('restrict');
-            $table->foreignId('jugador_id')->constrained()->onUpdate('cascade')->onDelete('restrict');
+            $table->foreignId('bandera_id')->constrained()->onUpdate('cascade')->onDelete('restrict');
         });
     }
 
