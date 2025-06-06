@@ -1,3 +1,5 @@
+@extends('plantilla')
+@section('contenido')
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,10 +22,9 @@
 
   <body>
     <header>
-      @extends('plantilla')
+      
     </header>
     <main>
-      @section('contenido')
       <!--Fomulario de registro-->
       <div class="container">
         <div class="row">
@@ -39,7 +40,7 @@
                 </svg>
               </span>
               <div class="form-floating">
-                <input type="text" class="form-control" id=" name" name="name" placeholder="Nombre de Usuario">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Nombre de Usuario">
                 <label for="name">Nombre de Usuario</label>
               </div>
             </div>
@@ -84,7 +85,16 @@
             Campo obligatorio
           </div>
         @enderror
-        <input type="checkbox">Acepto los <a href="{{asset('registro/TYC.pdf')}}">terminos y condiciones</a> de la p
+        <input type="checkbox" name="terms" id="terms">Acepto los <a href="{{asset('registro2/TYC.pdf')}}">terminos y condiciones</a> de la página
+        @error('terms')
+        <div class="text-danger">
+          Acepte los terminos
+        </div>
+        @enderror
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="reset" class="btn btn-danger">Cancelar</button>
+          <button type="submit" class="btn btn-success" namee="registro" id="registro">Registrate ya</button>
         </div>
         </form>
       </div>
@@ -109,6 +119,40 @@
       crossorigin="anonymous"
     ></script>
   </body>
+<script>
+  $(document).ready(function () {
+    $('button[type="submit"]').prop('disabled', true);
+    $('button[type="reset"]').prop('disabled', true);
+
+    function validarFormulario() {
+      const nombre = $('#name').val().trim();
+      const email = $('#email').val().trim();
+      const password = $('#password').val().trim();
+      const password2 = $('#password2').val().trim();
+      const terms = $('#terms').is(':checked');
+
+      $('button[type="submit"]').prop('disabled', false);
+      $('button[type="reset"]').prop('disabled', false);
+    }
+
+  
+    $('#name, #email, #password, #password2, #terms').on('input change', function () {
+      validarFormulario();
+    });
+
+    $('#registro').on('click', function (e) {
+      const nombre = $('#name').val().trim();
+      const email = $('#email').val().trim();
+      const password = $('#password').val().trim();
+      const password2 = $('#password2').val().trim();
+      const terms = $('#terms').is(':checked');
+
+      if (nombre && email && password && password2 && terms) {
+        alert('Usuario creado');
+      }
+    });
+  });
+</script>
 </html>
 
 @endsection
