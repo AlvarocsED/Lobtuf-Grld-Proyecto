@@ -3,7 +3,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Futbo, Grid</title>
+        <title>Lobtuf Grid</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
