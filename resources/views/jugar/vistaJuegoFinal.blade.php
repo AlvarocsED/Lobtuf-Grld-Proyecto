@@ -1,5 +1,3 @@
-@extends('plantilla')
-@section('contenido')
 <!doctype html>
 <html lang="en">
     <head>
@@ -22,9 +20,14 @@
 
     <body>
         <header>
-            <!-- place navbar here -->
+            @extends('plantilla')
         </header>
-        <main></main>
+        <main>
+            @section('contenido')
+            <div class="container-fluid">
+                <div class="border-bottom border-warning"></div>
+            </div>
+        </main>
         <footer>
             <!-- place footer here -->
         </footer>

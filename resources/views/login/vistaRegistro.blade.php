@@ -94,7 +94,7 @@
         </div>
         <div class="d-flex justify-content-center">
           <button type="reset" class="btn btn-danger">Cancelar</button>
-          <button type="submit" class="btn btn-success" namee="registro" id="registro">Registrate ya</button>
+          <a href="{{route('vistaLogin')}}" class="btn btn-success" name="registro" id="registro">Registrate ya</a>
         </div>
         </form>
       </div>
@@ -119,40 +119,5 @@
       crossorigin="anonymous"
     ></script>
   </body>
-<script>
-  $(document).ready(function () {
-    $('button[type="submit"]').prop('disabled', true);
-    $('button[type="reset"]').prop('disabled', true);
-
-    function validarFormulario() {
-      const nombre = $('#name').val().trim();
-      const email = $('#email').val().trim();
-      const password = $('#password').val().trim();
-      const password2 = $('#password2').val().trim();
-      const terms = $('#terms').is(':checked');
-
-      $('button[type="submit"]').prop('disabled', false);
-      $('button[type="reset"]').prop('disabled', false);
-    }
-
-  
-    $('#name, #email, #password, #password2, #terms').on('input change', function () {
-      validarFormulario();
-    });
-
-    $('#registro').on('click', function (e) {
-      const nombre = $('#name').val().trim();
-      const email = $('#email').val().trim();
-      const password = $('#password').val().trim();
-      const password2 = $('#password2').val().trim();
-      const terms = $('#terms').is(':checked');
-
-      if (nombre && email && password && password2 && terms) {
-        alert('Usuario creado');
-      }
-    });
-  });
-</script>
 </html>
-
 @endsection
