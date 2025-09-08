@@ -1,49 +1,88 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <title>Lobtuf Grid</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lobtuf Grid</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding-top: 30px;
+    }
+    .grid-table {
+      border-collapse: collapse;
+      margin: auto;
+    }
+    .grid-table td, .grid-table th {
+      border: 1px solid white;
+      width: 120px;
+      height: 120px;
+      vertical-align: middle;
+      text-align: center;
+    }
+    .grid-table img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .flag-icon {
+      width: 30px;
+      height: 20px;
+    }
+    .form-container {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        @extends('plantilla')
+    </header>
+    <main>
+        @section('contenodo')
+<div class="border-bottom border-imfo border-bottom-2">
+  <h1 class="fw-bold">FUTBOL11 GRID</h1>
+</div>
+  <table class="grid-table mt-4">
+    <tr>
+      <th></th>
+      <th><img src=//bandera1 class="flag-icon" alt="//nombreBamdera1"><br><small>FRANCE</small></th>
+      <th><img src="https://flagcdn.com/ch.svg" class="flag-icon" alt="Switzerland"><br><small>SWITZERLAND</small></th>
+      <th><img src="https://flagcdn.com/ng.svg" class="flag-icon" alt="Nigeria"><br><small>NIGERIA</small></th>
+    </tr>
+    <tr>
+      <th><img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Liverpool_FC.svg" alt="Liverpool" style="height:40px;"><br><small>LIVERPOOL</small></th>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Sadio_Mané_2018.jpg" alt="Sadio Mané"></td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Xherdan_Shaqiri_2018.jpg" alt="Shaqiri"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th><img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Inter_Milan.svg" alt="Inter" style="height:40px;"><br><small>INTER</small></th>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Khouma_Babacar.jpg" alt="Babacar"></td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Valon_Behrami_2018.jpg" alt="Behrami"></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th><img src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg" alt="Chelsea" style="height:40px;"><br><small>CHELSEA</small></th>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Nicolas_Anelka.jpg" alt="Anelka"></td>
+      <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Dennis_Zakaria_2021.jpg" alt="Zakaria"></td>
+      <td></td>
+    </tr>
+  </table>
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-    </head>
-
-    <body>
-        <header>
-            @extends('plantilla')
-        </header>
-        <main>
-            @section('contenido')
-            <div class="container-fluid">
-                <div class="border-bottom border-warning"></div>
-            </div>
-        </main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+  <div class="form-container">
+    <form class="d-flex justify-content-center">
+      <input type="text" class="form-control w-25 me-2" placeholder="Type the footballer here">
+      <button type="submit" class="btn btn-light">↩️</button>
+    </form>
+    <p class="mt-3 text-muted">Anelka has been added on the only possible spot</p>
+  </div>
+    </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
-
-@endsection
+@endsection('contenido')
