@@ -94,7 +94,7 @@
         </div>
         <div class="d-flex justify-content-center">
           <button type="reset" class="btn btn-danger">Cancelar</button>
-          <a href="{{route('vistaLogin')}}" class="btn btn-success" name="registro" id="registro">Registrate ya</a>
+          <button type="submit" class="btn btn-succesS">Registrate ya</button>
         </div>
         </form>
       </div>
