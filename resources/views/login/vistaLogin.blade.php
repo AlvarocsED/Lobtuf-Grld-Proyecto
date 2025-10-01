@@ -20,10 +20,19 @@
 
   <body>
     <header>
-      @extends('plantilla')
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{route('vistaJugar')}}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQntLbDieNmfnNwUYPDmdvfyqxxVVwa8vMFvw&s" alt="Lobtuf grid" height="24" width="30">
+            Lobtuf</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+        </div>
+      </nav>
     </header>
     <main>
-      @section('contenido')
+  
       <!-- Iniciar sesion -->
 <section class="py-3 py-md-5 py-xl-8">
     <div class="container">
@@ -106,4 +115,3 @@
     ></script>
   </body>
 </html>
-    @endsection

@@ -1,5 +1,3 @@
-@extends('plantilla')
-@section('contenido')
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,7 +20,16 @@
 
   <body>
     <header>
-      
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Fourth navbar example">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{route('vistaJugar')}}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQntLbDieNmfnNwUYPDmdvfyqxxVVwa8vMFvw&s" alt="Lobtuf grid" height="24" width="30">
+            Lobtuf</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+        </div>
+      </nav>
     </header>
     <main>
       <!--Fomulario de registro-->
@@ -94,7 +101,7 @@
         </div>
         <div class="d-flex justify-content-center">
           <button type="reset" class="btn btn-danger">Cancelar</button>
-          <button type="submit" class="btn btn-succesS">Registrate ya</button>
+          <button type="submit" class="btn btn-success ">Registrate ya</button>
         </div>
         </form>
       </div>
@@ -120,4 +127,3 @@
     ></script>
   </body>
 </html>
-@endsection

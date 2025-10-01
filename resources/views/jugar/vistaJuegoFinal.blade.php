@@ -1,51 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lobtuf Grid</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #000;
-      color: white;
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      padding-top: 30px;
-    }
-    .grid-table {
-      border-collapse: collapse;
-      margin: auto;
-    }
-    .grid-table td, .grid-table th {
-      border: 1px solid white;
-      width: 120px;
-      height: 120px;
-      vertical-align: middle;
-      text-align: center;
-    }
-    .grid-table img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-    .flag-icon {
-      width: 30px;
-      height: 20px;
-    }
-    .form-container {
-      margin-top: 30px;
-    }
-  </style>
-</head>
-<body>
-    <header>
-        @extends('plantilla')
-    </header>
-    <main>
-        @section('contenodo')
+@extends('plantilla')
+@section('titulo')
+    Juego
+@endsection
+@section('contenido')
 <div class="border-bottom border-imfo border-bottom-2">
-  <h1 class="fw-bold">FUTBOL11 GRID</h1>
+  <h1 class="fw-bold">LOBTUF GRID</h1>
 </div>
   <table class="grid-table mt-4">
     <tr>
@@ -85,4 +44,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-@endsection('contenido')
+@endsection
