@@ -1,6 +1,39 @@
 insert into banderas values
-(1, 'Alemania', 'Alemania.png'),
-(2, 'Arggntina', 'Arggntina.png'),
-(3, 'Austria', 'Austria.png'),
-(4, 'Belgica', 'Belgica.png').
-                                                                     
+(1, curdate(). 'Alemania', 'Alemania.png'),
+(2, curdate(), 'Arggntina', 'Arggntina.png'),
+(3, curdate(), 'Austria', 'Austria.png'),
+(4, curdate(), 'Belgica', 'Belgica.png').
+(5, curdate(), 'Camerún', 'Camerun.png'),
+(6, curdate(), 'Chile', 'Chile.png'),
+(7, curdate(), 'Costa de Marfll', 'CMarfil.png'),
+(8, curdate(), 'Colombia', 'Colombia.png'),
+(9, curdate(), 'Croacia', 'Croacia.png'),
+(10, curdate(), 'Dinamarca', 'Dinamarca.png'),
+(11, curdate(), 'Eslovenia', 'Eslovenia.png'),
+(12, curdate(), 'España', 'Espania.png'),
+(13, curdate(), 'Estados Unidos', 'Estados_Unidos,png'),
+(14, curdate(), 'Francia', 'Francia.png'),
+(15, curdate(), 'Gales', 'Gales.png'),
+(16, curdate(), 'Ghana', 'Ghana.png'),
+(17, curdate(), 'Inglaterra', 'Inglaterra.png'),
+(18, curdate(), 'Marruecos', 'Marruecos,png'),
+(19, curdate(), 'Mexico', 'Mexico.png'),
+(20, curdate(), 'Noruega', 'Noruega.png'),
+(21, curdate(), 'Paises Bajos', 'Paises_Bajos.png'),
+(22, curdate(), 'Polonia', 'Polonia.png'),
+(23, curdate(), 'Portugal', 'Portugal.png'),
+(24, curdate(), 'Senegal', 'Senegal.png'),
+(25, curdate(), 'Serbia', 'Serbia.png'),
+(26, curdate(), 'Suecia', 'Suecia.png'),
+(27, curdate(), 'Turquia', 'Turquia.png'),
+(28, curdate(), 'Ucrania', 'Ucrania.png'),
+(29, curdate(), 'Uruguay', 'Uruguay.png');
+
+
+
+insert into equipos values
+(1, curdate(), 'Milan', 'AC_Milan.png'),
+(2, curdate(), 'Ajax', 'AFC_Ajax.png'),
+(3, curdate(), 'Arsenal', 'Arsenal.png'),
+(4, curdate(), 'Atletico de Madrid', 'Atletico.png'),
+(5, curdate(), 'Borussia Dortmund', 'Borussia_Dortmund.png'),
