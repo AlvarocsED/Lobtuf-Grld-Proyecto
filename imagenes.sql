@@ -37,3 +37,6 @@ insert into equipos values
 (3, curdate(), 'Arsenal', 'Arsenal.png'),
 (4, curdate(), 'Atletico de Madrid', 'Atletico.png'),
 (5, curdate(), 'Borussia Dortmund', 'Borussia_Dortmund.png'),
+(6, curdate(), 'Chelsea', 'Chelsea.png'),
+(7, curdate(), 'Barcelona', 'FC_Barcelona.png'),
+(8, curdate(), 'Bayer Munich', 'FC_Bayern_Munchen.png'),
