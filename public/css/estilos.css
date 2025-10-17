@@ -1,15 +1,31 @@
 body{
     height: 100vh;  
 }
-.banderas{
-    width: 100px;
+.grid-container {
+    max-width: 700px;
+    margin: 50px auto;
+    border-collapse: collapse;
+  }
+  .grid-container td, .grid-container th {
+    border: 1px solid #1e2024;
+    padding: 20px;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .team-logo {
+    width: 60px;
     height: 60px;
-}
-.escudos{
-    width: 200px;
-    height: 200px;
-}
-.jugadores{
-    width: 200px;
-    height: 200px;
-}
+  }
+  .flag {
+    width: 60px;
+    height: 40px;
+  }
+  .futbol11-title {
+    color: #ffc107;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  .grid-header {
+    background-color: #101218;
+  }
