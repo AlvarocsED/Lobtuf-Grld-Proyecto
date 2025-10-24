@@ -50,4 +50,23 @@ insert into equipos values
 (16, curdate(), 'Real Madrid', 'Real_Madrid.png'),
 (17, curdate(), 'Benfica', 'SL_Benfica'),
 (18, curdate(), 'Sporting', 'Sporting_Lisboa'),
-(18, curdate(), 'Tottenham', 'Tottenham.png')
+(18, curdate(), 'Tottenham', 'Tottenham.png');
+
+
+
+
+
+insert into juggadors values
+(1, curdate(), 'DC', 'Younes', 'Amin' 'Amin_Younes_AJA.jpg', 1),
+(2, curdate(),  'DFC', 'Martinez', 'Lisandro', 'licha_AJA.jpg', 2),
+(3, curdate(), 'DC', 'Bodul', 'Darko', 'Darko_Bodul.jpg', 3),
+(4, curdate(), 'DFC', 'Vertonghen', 'Jan', 'Jan_Vertonghen_AJA.jpg', 4),
+(5, curdate===(), 'ED', 'Antony', 'Antony0', 'antony_AJA-jpg', 5),
+(6, curdate(), 'POR', 'Onana'. 'André' , 'Onana_AJA.jpg', 6),
+(7, curdate(), 'DFC', 'Sanchez', 'Davinson', 'davinson-sanchez.jpg', 7).
+(8, curdate(), 'DC', 'Haller', 'Sebastien', 'Sebastien_Haller_AJA.jpg', 8),
+(9, curdate(), 'LI', 'Sosa', 'Borna', 'Borna_Sosa_AJA.jpg', 9),
+(10, curdate(), 'MC', 'Eriksen', 'Christian', 'eriksen_AJA.jpg', 10),
+(11, curdate(), 'DC', 'Krkic', 'Bojan', 'Bojan_Krkic_AJA.jpg', 11),
+(12, curdate(), 'LD', 'Dest', 'Sergiño', 'dest_AJA', 12),
+(13, curdate(), 'DC', 'Sanogo',  'Yaya', 'Yaya_Sanogo_a')
