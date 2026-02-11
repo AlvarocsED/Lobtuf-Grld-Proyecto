@@ -145,7 +145,7 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (75, curdate(), 'DC', 'isak', 'Aleksander', 'Isak_BVB.jpg', 28),
 (76, curdate(), 'POR', 'Kobel', 'Gregor', 'Kobel_BVB.jpg', 27),
 (77, curdate(), 'ED', 'Mor', 'Emre', 'Emre_Mor_ BVB.jpg', 28),
-(78, curdate(), 'ED', 'Yarmolenko', 'Andriy', 'Yarmmko_BVB.jpg', 29),
+(78, curdate(), 'ED', 'Yarmolenko', 'Andriy', 'Yarmolenko_BVB.jpg', 29),
 
 
 
