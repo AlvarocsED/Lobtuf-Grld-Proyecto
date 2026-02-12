@@ -163,11 +163,11 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (90, curdate(), 'MC', 'Doherty', 'Jack', 'Doherty_ATM.jpg', 18),
 (91, curdate(), 'POR', 'Abbiatti', 'Franco', 'Abbiati_ATN.jpg', 19),
 (92, curdate(), 'POR', 'Bounou', 'Yacine', 'Bono_ATM.jpg', 20),
-(93, curdate(), 'DC', 'Jimenez', 'Raul', 'Raul_Jimenez_ATM.jpg', 21);
+(93, curdate(), 'DC', 'Jimenez', 'Raul', 'Raul_Jimenez_ATM.jpg', 21),
 (94, curdate(), 'DC', 'Sorloth', 'Alexander', 'Sorloth_ATM.jpg', 22),
 (95, curdate(), 'DC', 'Depay', 'Memphis', 'Depay_ATM.jpg', 23),
 (96, curdate(), 'EI', 'Jota', 'Diogo', 'Diogo_Jota_ATM.jpg', 25),
-(96, curdate(), 'MCD', 'Ndiaye', 'Amath', ,'Amatg_Ndiaye_ATM.jpg', 26),
+(96, curdate(), 'MCD', 'Ndiaye', 'Amath', ,'Amath_Ndiaye_ATM.jpg', 26),
 (97, curdate(), 'DC', 'Saponjic', 'Ivan', 'Ivan_Saponjic_ATM.jpg', 27),
 (98, curdate(), 'MCD', 'Wicky', 'Raphael', 'Raphael_Wicky_ATM.jpg', 29),
 (99, curdate(), 'MC', 'Turan', 'Arda', 'Arda_Turan_ATM.jpg', 30),
