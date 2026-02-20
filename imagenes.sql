@@ -205,3 +205,8 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (125, curdate(),'MC', 'Kroos', 'Toni', 'KroosÇ_RMA.jpg', 1),
 (126, curdate(), 'ED', 'Mastantuono', 'Franco', 'Mastantuono_RMA.jpg', 2), 
 (127, curdate(), 'DFC', 'Alaba', 'David', 'Alaba_RMA.jpg', 3),
+(128, curdate(), 'POR', 'Courtois', 'Thibaut', 'Courtois_RMA.jpg', 4),
+(129, curdate(), 'EI', 'Vini', 'JR', 'Vini_RMA.jpg', 5),
+(130, curdate(), 'MC', 'Geremi', 'Njitap', 'Geremi_RMA.jpg', 6),
+(131, curdate(), 'MC', 'Rincón', 'Freddy', 'Freddy_Rincon_RMA.jpg', 9),
+(132, curdate(), 'MC', 'Kovacic', 'Mateo', 'Kovacic_RMA.jpg', 10),
