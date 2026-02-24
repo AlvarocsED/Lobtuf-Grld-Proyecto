@@ -220,3 +220,7 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (140, curdate(), 'ED', 'Diaz', 'Brahim', 'Brahim_RMA.jpg', 20),
 (141 curdate(), 'DC', 'Chicharito', 'Javier', 'Chicharito_RMA.jpg', 21),
 (142, curdate(), 'MCO', 'Ødegaard', 'Martin', 'Odegaard_RMA.jpg', 22),
+(143, curdate(), 'MCO', 'van der Vaart', 'Rafael', 'van_der_Vaart_RMA.jpg', 23),
+(144, curdate(), 'POR', 'Dudek', 'Jerzy', 'Dudek_RMA.jpg', 24),
+(145, curdate(), 'LI', 'Coentrao', 'Fabio', 'Coentrao_RMA.jpg', 25),
+(146, curdateº(), 'DC', 'Jović', 'Luka', 'Jovic_RMA.jpg', 27),
