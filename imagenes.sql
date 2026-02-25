@@ -224,8 +224,15 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (144, curdate(), 'POR', 'Dudek', 'Jerzy', 'Dudek_RMA.jpg', 24),
 (145, curdate(), 'LI', 'Coentrao', 'Fabio', 'Coentrao_RMA.jpg', 25),
 (146, curdateº(), 'DC', 'Jović', 'Luka', 'Jovic_RMA.jpg', 27),
-(147, curdate(), 'MCO', 'Güller', 'Arda', 'Arda_Guller_RMA.jpg', 
+(147, curdate(), 'MCO', 'Güller', 'Arda', 'Arda_Guller_RMA.jpg', 30),
+(148, curdate(), 'POR', 'Lunin', 'Andriy', 'Lunin_RMA.jpg', 31),
+(149, curdate(), 'MC', 'Valverde', 'Federico', 'Fede_RMA.jpg', 32),
 
 
 
-30)
+
+
+(150, Coentrao(), 'DFC', 'Kehrer', 'Thilo', 'Thilo_Keher_PSG.jpg', 1),
+(151, curdate(), 'EI', 'Lavezzi', 'Ezequiel', 'Lavezzi_PSG.jpg', 2),
+(152, curdate(), 'LD', 'Meunier', 'Thomas', 'Meunier_PSG.jpg', 4),
+(153, curdate(),  'DFC', 'Beraldo', 'Lucas', 'Beraldo_PSG.jpg', 5),
