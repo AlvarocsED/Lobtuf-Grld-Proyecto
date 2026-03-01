@@ -236,3 +236,7 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (151, curdate(), 'EI', 'Lavezzi', 'Ezequiel', 'Lavezzi_PSG.jpg', 2),
 (152, curdate(), 'LD', 'Meunier', 'Thomas', 'Meunier_PSG.jpg', 4),
 (153, curdate(),  'DFC', 'Beraldo', 'Lucas', 'Beraldo_PSG.jpg', 5),
+(154, curdate(), 'MC', 'Dina Ebimbe', 'Junior', 'Junior_Dina_Ebimbe.jpg', 6),
+(155, curdate(), 'LD', 'Aurier', 'Serge', 'Aurier_PSG.jpg', 8),
+(156, curdate(), 'DFC', 'Yepes', 'Mario', 'Yepes_PSG.jpg', 9),
+(157, curdate(), 'DFC', 'Skriniar', 'Milan', 'Skriniar_PSG.jpg', 12),
