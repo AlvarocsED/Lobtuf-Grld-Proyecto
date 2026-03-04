@@ -255,3 +255,12 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (171, curdate(), 'DC', 'Inrahimovic', 'Zlatan', 'Zlatan_PSG.jpg', 28),
 (172, curdate(), 'MCO' 'Yakin', 'Hakan', 'Hakam_Yakin_PSG.jpg', 29),
 (173, curdate(), 'DC', 'Erdinç', 'Mavlüt', 'Mavlut_Erdinc_PSG.jpg', 30),
+(174, curdate(), 'DFC', 'Zabarnyl', 'Ilya', 'Ilya_Zabarnyl_PSG.jpg', 31),
+(175,  curdate(), 'DC', 'Cavani', 'Edinson', 'Cavani_PSG.jpg', 32),
+
+
+
+
+(176, curdate(), 'DFC', 'Bisseck', 'Yann', 'Bisseck_INT.jpg', 1),
+(177, curdate(), 'DC', 'Martinez', 'Lautaro', 'Lautaro_INT.jpg', 2),
+(178, curdate(), 'MD', 'Lazaro', 'Valentin', 'Valentin_Lazaro_INT.jpg', 3),
