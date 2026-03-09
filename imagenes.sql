@@ -271,3 +271,7 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (183, curdate(), 'LD', 'Yao', 'Elonge', 'Elonge_Yao_INT.jpg', 8),
 (184, curdate(), 'DFC', 'Murillo', 'Jeison', 'Murillo_INT.jpg', 9),
 (185, curdate(), 'DC', 'Livaja', 'Marko', 'Livaja', 'Livaja_INT.jpg', 10),
+(186, curdate(), 'MC', 'Olsen', 'Patrick', 'Patrick_Olsen_INT.jpg', 11),
+(187, curdate(), 'POR', 'Handanovic', 'Samir', 'Handanovic_INT.jpg', 12),
+(188, curdate(), 'POR', 'Martinez', 'Josep', 'Josep_Martinez_INT.jpg', 13),
+(189, curdate(), 'DC', 'Thuram', 'Marcus', 'Thuram_INT.jpg', 15),
