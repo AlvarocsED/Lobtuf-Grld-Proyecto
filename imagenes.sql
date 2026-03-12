@@ -278,4 +278,5 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (190, curdate(), 'MI', 'Asamoah', 'Kwadwo', 'Asamoah_INT.jpg', 17),
 (191, curdate(), 'LD', 'Young', 'Ashley', 'Ashley_Young_INT.jpg', 18),
 (192, curdate(), 'MC', 'Barella', 'Nicolo', 'Barella_INT.jpg', 20),
-(193, Coentrao(), 'MC', 'Kharja', 'Houssine', 'Kharja_INT.jpg', 21),
+(193, curdate(), 'MC', 'Kharja', 'Houssine', 'Kharja_INT.jpg', 21),
+(194, curdate(), 'LD', 'Dumfries', 'Denzel', 'Dumfries_INT.jpg', 24),
