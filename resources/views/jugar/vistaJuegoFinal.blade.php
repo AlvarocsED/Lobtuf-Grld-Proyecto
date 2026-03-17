@@ -10,15 +10,17 @@
     <thead class="grid-header">
       <tr>
         <th>FUTBOL11 GRID</th>
-        <th><img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Juventus_FC_2017_logo.svg" class="team-logo" alt="Juventus"><br>JUVENTUS</th>
-        <th><img src="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" class="flag" alt="Ucrania"><br>UKRAINE</th>
+        <th><img src="{{ asset('img/banderas/'.$banderas[0]->bandera) }}" class="team-logo" alt="Juventus"><br>{{$banderas[0]->pais}}</th>
+        <th><img src="{{ asset('img/banderas/'.$banderas[1]->bandera) }}" class="flag" alt="{{$bandera[1]->pais }} "><br>{{$bandera[1]->pais }}</th>
         <th><img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" class="flag" alt="Alemania"><br>GERMANY</th>
-      </tr>
+      .</tr>
     </thead>
     <tbody>
       <tr>
         <th><img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" class="team-logo" alt="Man City"><br>MAN CITY</th>
-        <td></td><td></td><td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <th><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg" class="team-logo" alt="AC Milan"><br>AC MILAN</th>

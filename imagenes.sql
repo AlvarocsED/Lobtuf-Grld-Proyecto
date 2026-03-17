@@ -286,4 +286,12 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (198, ,curdate(), 'MCD', 'Stankovic', 'Aleksandar', 'Stankovic_INT.jpg', 27),
 (199, curdate(), 'DC', 'Ibrahimovic', 'Zlatan', 'Ibra_INT.jpg', 28),
 (200, curdate(), 'POR', 'Sommer', 'Yann', 'Sommer_INT.jpg', 29),
-(201, curdate())
+(201, curdate(), 'MCO', 'Calhanoglu', 'Hakan', 'Calhanoglu_INT.jpg', 30),
+(202, curdate(), 'MC', 'Vecino', 'Matias', 'Vecino_INT.jpg',  32),
+
+
+
+
+
+(203, curdate(), 'DC', 'Füllkrug', 'Niklas', 'Fullkrug_ACN.jpg', 1),
+(204,  curdate(), 'DFC', 'Pellegrino', 'Lorenzo', 'Pellegrino_ACM.jpg', 2), 
