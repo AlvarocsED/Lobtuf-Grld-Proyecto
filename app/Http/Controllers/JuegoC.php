@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 define ('MIN_ID_BANDERA',1);
 define ('MAX_ID_BANDERA',29);
 
+define ('MIN_ID_ESCUDOS',1);
+define ('MAX_ID_ESCUDOS',16);
 class JuegoC extends Controller
 {
 
@@ -44,10 +46,23 @@ class JuegoC extends Controller
 
         //Seleccionar 3 equipos al azar
         $equipos=array();
+        $numEscudo=0;
+        do{
+            $id=rand(MIN_ID_ESCUDOS, MAX_ID_ESCUDOS);
+            if(!in_array($id,$equipos)) {
+                $equipos[]=$id;
+                $numEscudo++;
+            }
+        }while($numEscudo<3);
+          $foto[]=Equipo::find($equipos[0]);
+          $foto[]=Equipo::find($equipos[1]);
+          $foto[]=Equipo::find($equipos[2]);
+    }
+
 
 
 
         //Crear partida
         return view('jugar/vistaJuegoFinal',compact('banderas','equipos'));
-    }
+
 }

@@ -9,10 +9,10 @@
   <table class="table grid-container table-dark table-bordered align-center">
     <thead class="grid-header">
       <tr>
-        <th>FUTBOL11 GRID</th>
-        <th><img src="{{ asset('img/banderas/'.$banderas[0]->bandera) }}" class="team-logo" alt="Juventus"><br>{{$banderas[0]->pais}}</th>
-        <th><img src="{{ asset('img/banderas/'.$banderas[1]->bandera) }}" class="flag" alt="{{$bandera[1]->pais }} "><br>{{$bandera[1]->pais }}</th>
-        <th><img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" class="flag" alt="Alemania"><br>GERMANY</th>
+        <th><img src="{{ asset('img/jugar/logo-tabla.png')}}" alt="Logo"  class="logo-app"></th>
+        <th><img src="{{ asset('img/banderas/'.$banderas[0]->bandera) }}" class="flag" alt="{{$banderas[0]->pais}}"><br>{{$banderas[0]->pais}}</th>
+        <th><img src="{{ asset('img/banderas/'.$banderas[1]->bandera) }}" class="flag" alt="{{$banderas[1]->pais }} "><br>{{$banderas[1]->pais }}</th>
+        <th><img src="{{ asset('img/banderas/'.$banderas[2]->bandera) }}" class="flag" alt="{{$banderas[2]->pais}}"><br>{{$banderas[2]->pais}}</br></th>
       .</tr>
     </thead>
     <tbody>

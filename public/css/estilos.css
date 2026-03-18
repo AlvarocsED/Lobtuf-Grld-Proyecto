@@ -20,6 +20,7 @@ body{
     width: 60px;
     height: 40px;
   }
+ 
   .futbol11-title {
     color: #ffc107;
     font-weight: bold;
@@ -29,3 +30,8 @@ body{
   .grid-header {
     background-color: #101218;
   }
+  .logo-app {
+    width: 60px;
+    height: 60px;
+  }
+ 

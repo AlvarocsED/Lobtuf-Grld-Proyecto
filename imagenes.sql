@@ -11,7 +11,7 @@ insert into  banderas(id,created_at,pais,bandera) values
 (10, curdate(), 'Dinamarca', 'Dinamarca.png'),
 (11, curdate(), 'Eslovenia', 'Eslovenia.png'),
 (12, curdate(), 'España', 'Espania.png'),
-(13, curdate(), 'Estados Unidos', 'Estados_Unidos,png'),
+(13, curdate(), 'Estados Unidos', 'Estados_Unidos.png'),
 (14, curdate(), 'Francia', 'Francia.png'),
 (15, curdate(), 'Gales', 'Gales.png'),
 (16, curdate(), 'Ghana', 'Ghana.png'),
@@ -43,17 +43,14 @@ insert into equipos(id,created_at,nombre,escudo) values
 (6, curdate(), 'Chelsea', 'Chelsea.png'),
 (7, curdate(), 'Barcelona', 'FC_Barcelona.png'),
 (8, curdate(), 'Bayer Munich', 'FC_Bayern_Munchen.png'),
-(9, curdate(), 'Oporto', 'FC_Porto.png'),
-(10, curdate(), 'Inter', 'Inter_Milan.png'),
-(11, curdate(), 'Juventus', 'Juventus.png'),
-(12, curdate(), 'Liverpool', 'Liveerpool.png'),
-(13, curdate(), 'Manchester City', 'Manchester_City.png'),
-(14, curdate(), 'Manchester United', 'Manchester_United.png'),
-(15, curdate(), 'PSG', 'PSG.png'),
-(16, curdate(), 'Real Madrid', 'Real_Madrid.png'),
-(17, curdate(), 'Benfica', 'SL_Benfica'),
-(18, curdate(), 'Sporting', 'Sporting_Lisboa'),
-(19, curdate(), 'Tottenham', 'Tottenham.png');
+(9, curdate(), 'Inter', 'Inter_Milan.png'),
+(10, curdate(), 'Juventus', 'Juventus.png'),
+(11, curdate(), 'Liverpool', 'Liveerpool.png'),
+(12, curdate(), 'Manchester City', 'Manchester_City.png'),
+(13, curdate(), 'Manchester United', 'Manchester_United.png'),
+(14, curdate(), 'PSG', 'PSG.png'),
+(15, curdate(), 'Real Madrid', 'Real_Madrid.png'),
+(16, curdate(), 'Tottenham', 'Tottenham.png');
 
 
 
