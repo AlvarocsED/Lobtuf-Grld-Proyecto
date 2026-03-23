@@ -4,7 +4,7 @@
 @endsection
 @section('contenido')
 <div class="container text-center">
-  <h1 class="futbol11-title">FUTBOL11 GRID</h1>
+  <h1 class="futbol11-title">LOBTUG GRID</h1>
 
   <table class="table grid-container table-dark table-bordered align-center">
     <thead class="grid-header">
@@ -17,22 +17,24 @@
     </thead>
     <tbody>
       <tr>
-        <th><img src="https://upload.wikimedia.org/wikipedia/en/e/eb/Manchester_City_FC_badge.svg" class="team-logo" alt="Man City"><br>MAN CITY</th>
+        <th><img src="{{ asset('img/escudos/'.$equipos[0]->escudo) }}" class="team-logo" alt ="{{$equipos[0]->nombre}}"><br>{{$equipos[0]->nombre}}</th>
         <td></td>
         <td></td>
         <td></td>
       </tr>
       <tr>
-        <th><img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_of_AC_Milan.svg" class="team-logo" alt="AC Milan"><br>AC MILAN</th>
+        <th><img src="{{ asset('img/escudos/'.$equipos[1]->escudo) }}" class="team-logo" alt="{{$equipos[1]->nombre}}"><br>{{$equipos[1]->nombre}}</th>
         <td></td><td></td><td></td>
       </tr>
       <tr>
-        <th><img src="https://upload.wikimedia.org/wikipedia/en/c/cc/Chelsea_FC.svg" class="team-logo" alt="Chelsea"><br>CHELSEA</th>
+        <th><img src="{{ asset('img/escudos/'.$equipos[2]->escudo) }}" class="team-logo" alt="{{$equipos[2]->nombre}}"><br>{{$equipos[2]->nombre}}</th>
         <td></td><td></td><td></td>
       </tr>
     </tbody>
   </table>
-
-  <input type="text" class="form-control w-50 mx-auto mt-3" placeholder="Type the footballer here">
+  <div class="d-flex justify-content-center mt-3 gap-4">
+    <input type="text" class="form-control w-50" placeholder="Escribe el jugador aquí">
+    <button type="button" class="btn btn-warning">Probar</button>
+  </div>
 </div>
 @endsection

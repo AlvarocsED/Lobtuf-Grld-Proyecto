@@ -1,6 +1,6 @@
 insert into  banderas(id,created_at,pais,bandera) values
 (1, curdate(), 'Alemania', 'Alemania.png'),
-(2, curdate(), 'Arggntina', 'Arggntina.png'),
+(2, curdate(), 'Argentina', 'Argentina.jpg'),
 (3, curdate(), 'Austria', 'Austria.png'),
 (4, curdate(), 'Belgica', 'Belgica.png'),
 (5, curdate(), 'Camerún', 'Camerun.png'),
@@ -18,7 +18,7 @@ insert into  banderas(id,created_at,pais,bandera) values
 (17, curdate(), 'Inglaterra', 'Inglaterra.png'),
 (18, curdate(), 'Irlanda', 'Irlanda.png'),
 (19, curdate(), 'Italia', 'Italia.png'),
-(20, curdate(), 'Marruecos', 'Marruecos,png'),
+(20, curdate(), 'Marruecos', 'Marruecos.png'),
 (21, curdate(), 'Mexico', 'Mexico.png'),
 (22, curdate(), 'Noruega', 'Noruega.png'),
 (23, curdate(), 'Paises Bajos', 'Paises_Bajos.png'),
@@ -26,8 +26,8 @@ insert into  banderas(id,created_at,pais,bandera) values
 (25, curdate(), 'Portugal', 'Portugal.png'),
 (26, curdate(), 'Senegal', 'Senegal.png'),
 (27, curdate(), 'Serbia', 'Serbia.png'),
-(28, curdate(), 'Suecia', 'Suecia.pn0g0'),
-(29, curdate(), 'Suiza', 'Suiza.png').
+(28, curdate(), 'Suecia', 'Suecia.png'),
+(29, curdate(), 'Suiza', 'Suiza.png'),
 (30, curdate(), 'Turquia', 'Turquia.png'),
 (31, curdate(), 'Ucrania', 'Ucrania.png'),
 (32, curdate(), 'Uruguay', 'Uruguay.png');
@@ -45,7 +45,7 @@ insert into equipos(id,created_at,nombre,escudo) values
 (8, curdate(), 'Bayer Munich', 'FC_Bayern_Munchen.png'),
 (9, curdate(), 'Inter', 'Inter_Milan.png'),
 (10, curdate(), 'Juventus', 'Juventus.png'),
-(11, curdate(), 'Liverpool', 'Liveerpool.png'),
+(11, curdate(), 'Liverpool', 'Liverpool.png'),
 (12, curdate(), 'Manchester City', 'Manchester_City.png'),
 (13, curdate(), 'Manchester United', 'Manchester_United.png'),
 (14, curdate(), 'PSG', 'PSG.png'),
@@ -85,9 +85,6 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (26, curdate(), 'DC', 'Gomzalez', 'Lorenzo', 'Lorenzo_Gonzalez_AJA.jpg', 29),
 (27, curdate(), 'MCO', 'Sahin', 'Nuri', 'Nuri_Sahin_AJA.jpg', 30),
 (28, curdate(), 'DC', 'Suarez', 'Luis', 'luis_suarez_AJA.jpg', 32),
-
-
-
 (29, curdate(), 'EI', 'Musiala', 'Jamal', 'Musiala_BAY.jpg', 1),
 (30, curdate(), 'DFC', 'Demilchelis', 'Martin', 'Demichelis_BAY.jpg', 2),
 (31, curdate(), 'DFC', 'Alaba', 'David', 'Alaba_BAY.jpg', 3),
@@ -111,12 +108,6 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (49, curdate(), 'ED', 'Shaqiri', 'Xherdan', 'Shaqiri_BAY.jpg', 27),
 (50, curdate(), 'DC', 'Altintop', 'Hamit', 'Altintop_BAY.jpg', 28),
 (51, curdate(), 'DC', 'Tymoschukk', 'Anatolly', 'Anatolly_Tymoschuk_BAY.jpg', 28),
-
-
-
-
-
-
 (52, curdate(), 'MCO', 'Reus', 'Marco', 'Reus_BVB.jpg', 1),
 (53, curdate(), 'DFC', 'Balerdi', 'Leonardo', 'Balerdi_BVB.jpg', 2),
 (54, curdate(), 'MC', 'Sabitzer', 'Marcel', 'Sabitzer_BVB.jpg', 3),
@@ -143,10 +134,6 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (76, curdate(), 'POR', 'Kobel', 'Gregor', 'Kobel_BVB.jpg', 27),
 (77, curdate(), 'ED', 'Mor', 'Emre', 'Emre_Mor_ BVB.jpg', 28),
 (78, curdate(), 'ED', 'Yarmolenko', 'Andriy', 'Yarmolenko_BVB.jpg', 29),
-
-
-
-
 (79, curdate(), 'DC', 'Alvarez', 'Julián','Julian_Alvarez_ATM.jpg', 2),
 (80, curdate(), 'EI', 'Carrasco', 'Yannick-Ferreira', 'Carrasco_ATM', 4),
 (81, curdate(), 'DFC', 'Miranda', 'Joao', 'Miranda_ATM.jpg', 5),
@@ -164,24 +151,20 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (94, curdate(), 'DC', 'Sorloth', 'Alexander', 'Sorloth_ATM.jpg', 22),
 (95, curdate(), 'DC', 'Depay', 'Memphis', 'Depay_ATM.jpg', 23),
 (96, curdate(), 'EI', 'Jota', 'Diogo', 'Diogo_Jota_ATM.jpg', 25),
-(96, curdate(), 'MCD', 'Ndiaye', 'Amath', ,'Amath_Ndiaye_ATM.jpg', 26),
 (97, curdate(), 'DC', 'Saponjic', 'Ivan', 'Ivan_Saponjic_ATM.jpg', 27),
 (98, curdate(), 'MCD', 'Wicky', 'Raphael', 'Raphael_Wicky_ATM.jpg', 29),
 (99, curdate(), 'MC', 'Turan', 'Arda', 'Arda_Turan_ATM.jpg', 30),
 (100, curdate(), 'DC', 'Forlan', 'Diego', 'Forlan_ATM.jpg', 32),
-
-
-
 (101, curdate(), 'POR', 'Ter Stegen', 'Marc André', 'Ter_Stegen_FCB.jpg', 1),
 (102, curdate(), 'ED', 'Saviola', 'Javier', 'Saviola_FCB.jpg', 2),
 (103, curdate(), 'DC', 'Demir', 'Yusuf', 'Demir_FCB.jpg', 3),
-(104, curdate().  'DFC', 'Vermaelen', 'Thomas', 'Vermaelen_FCB.jpg', 4),
+(104, curdate(),  'DFC', 'Vermaelen', 'Thomas', 'Vermaelen_FCB.jpg', 4),
 (105, curdate(), 'POR', 'Neto', 'Norberto', 'Neto_FCB.jpg', 5),
-(106,curdate(), 'MCO' 'Song', 'Alex', 'Song_FCB.jpg', 6),
+(106,curdate(), 'MCO', 'Song', 'Alex', 'Song_FCB.jpg', 6),
 (107, curdate(), 'MCD', 'Vidal', 'Arturo', 'Arturo_Vidal_FCB.jpg', 7),
 (108, curdate(), 'DFC', 'Mina', 'Yerry', 'Yerry_Mina_FCB.jpg', 8),
 (109, curdate(), 'MC', 'Touré', 'Yaya', 'Toure_FCB,jpg', 9),
-(110, curdate(), 'DC', 'Braithwaite', 'Martin'. 'Braithwaite_FCB.jpg', 10),
+(110, curdate(), 'DC', 'Braithwaite', 'Martin', 'Braithwaite_FCB.jpg', 10),
 (111, curdate(), 'DFC', 'Cubarsí', 'Pau', 'Cubarsi_FCB.jpg', 12),
 (112, curdate(), 'LD', 'Dest', 'Sergiño', 'Dest_FCB.jpg',  13),
 (113, curdate(), 'LD', 'Koyndé', 'Jules', 'Kounde_FCB.jpg', 14),
@@ -196,9 +179,6 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (122, curdate(), 'MC', 'Turan', 'Arda', 'Arda_Turan_FCB.jpg', 30),
 (123, curdate(), 'DFC', 'Chygrynsky', 'Dmytro', 'Chygrynsky_FCB.jpg', 31),
 (124, curdate(), 'DFC', 'Araujo', 'Ronald', 'Araujo_FCB.jpg', 32),
-
-
-
 (125, curdate(),'MC', 'Kroos', 'Toni', 'KroosÇ_RMA.jpg', 1),
 (126, curdate(), 'ED', 'Mastantuono', 'Franco', 'Mastantuono_RMA.jpg', 2), 
 (127, curdate(), 'DFC', 'Alaba', 'David', 'Alaba_RMA.jpg', 3),
@@ -214,22 +194,17 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (137, curdate(), 'MCD', 'Essien', 'Michael', 'Essien_RMA.jpg', 17),
 (138, curdate(), 'MC', 'Bellingham', 'Jude', 'Bellingham_RMA.jpg', 18), 
 (139, curdate(), 'DFC', 'Cannavaro', 'Fabio', 'Cannavaro_RMA.jpg', 19),
-(140, curdate(), 'ED', 'Diaz', 'Brahim', 'Brahim_RMA.jpg', 20),
-(141 curdate(), 'DC', 'Chicharito', 'Javier', 'Chicharito_RMA.jpg', 21),
+(140, curdate(), 'ED', 'Diaz', 'Brahim', 'Brahim_RMA.jpg',20),
+(141, curdate(), 'DC', 'Chicharito', 'Javier', 'Chicharito_RMA.jpg', 21),
 (142, curdate(), 'MCO', 'Ødegaard', 'Martin', 'Odegaard_RMA.jpg', 22),
 (143, curdate(), 'MCO', 'van der Vaart', 'Rafael', 'van_der_Vaart_RMA.jpg', 23),
 (144, curdate(), 'POR', 'Dudek', 'Jerzy', 'Dudek_RMA.jpg', 24),
 (145, curdate(), 'LI', 'Coentrao', 'Fabio', 'Coentrao_RMA.jpg', 25),
-(146, curdateº(), 'DC', 'Jović', 'Luka', 'Jovic_RMA.jpg', 27),
+(146, curdate(), 'DC', 'Jović', 'Luka', 'Jovic_RMA.jpg', 27),
 (147, curdate(), 'MCO', 'Güller', 'Arda', 'Arda_Guller_RMA.jpg', 30),
 (148, curdate(), 'POR', 'Lunin', 'Andriy', 'Lunin_RMA.jpg', 31),
 (149, curdate(), 'MC', 'Valverde', 'Federico', 'Fede_RMA.jpg', 32),
-
-
-
-
-
-(150, Coentrao(), 'DFC', 'Kehrer', 'Thilo', 'Thilo_Keher_PSG.jpg', 1),
+(150, curdate(), 'DFC', 'Kehrer', 'Thilo', 'Thilo_Keher_PSG.jpg', 1),
 (151, curdate(), 'EI', 'Lavezzi', 'Ezequiel', 'Lavezzi_PSG.jpg', 2),
 (152, curdate(), 'LD', 'Meunier', 'Thomas', 'Meunier_PSG.jpg', 4),
 (153, curdate(),  'DFC', 'Beraldo', 'Lucas', 'Beraldo_PSG.jpg', 5),
@@ -237,8 +212,8 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (155, curdate(), 'LD', 'Aurier', 'Serge', 'Aurier_PSG.jpg', 8),
 (156, curdate(), 'DFC', 'Yepes', 'Mario', 'Yepes_PSG.jpg', 9),
 (157, curdate(), 'DFC', 'Skriniar', 'Milan', 'Skriniar_PSG.jpg', 12),
-(158, curdate(), 'MC', 'Ruíz', 'Fabian', 'Fabian_PSG.jpg', 13)
-(159, curdate(), 'MCO', 'Weah', 'Timothy'. 'Weah_PSG.jpg', 14),
+(158, curdate(), 'MC', 'Ruíz', 'Fabian', 'Fabian_PSG.jpg', 13),
+(159, curdate(), 'MCO', 'Weah', 'Timothy', 'Weah_PSG.jpg', 14),
 (160, curdate(), 'DC', 'Kolo Muani', 'Randal', 'Kolo_Muani_PSG.jpg', 15),
 (161, curdate(), 'MC', 'Nyarko', 'Alex', 'Alex_Nyarko_PSG.jpg', 17),
 (162, curdate(), 'MC', 'Beckham', 'David', 'Beckham_PSG.jpg', 18),
@@ -247,17 +222,13 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (165, curdate(), 'MC', 'Wijnaldum', 'Georginio', 'Wijnaldum_PSG.jpg', 23),
 (166, curdate(), 'MCD', 'Krychowiak', 'Gregorz', 'Krychowiak_PSG.jpg', 24),
 (167, curdate(), 'MC', 'Neves', 'Joao', 'Joao_Neves_PSG.jpg', 25),
-(168. curdate(), 'ED', 'Mbaye', 'Ibrahima', 'Mbaye_PSG.jpg', 26),
+(168, curdate(), 'ED', 'Mbaye', 'Ibrahima', 'Mbaye_PSG.jpg', 26),
 (170, curdate(), 'DFC', 'Bisevac', 'Milan', 'Milan_Bisevac_PSG.jpg', 27),
 (171, curdate(), 'DC', 'Inrahimovic', 'Zlatan', 'Zlatan_PSG.jpg', 28),
-(172, curdate(), 'MCO' 'Yakin', 'Hakan', 'Hakam_Yakin_PSG.jpg', 29),
+(172, curdate(), 'MCO', 'Yakin', 'Hakan', 'Hakam_Yakin_PSG.jpg', 29),
 (173, curdate(), 'DC', 'Erdinç', 'Mavlüt', 'Mavlut_Erdinc_PSG.jpg', 30),
 (174, curdate(), 'DFC', 'Zabarnyl', 'Ilya', 'Ilya_Zabarnyl_PSG.jpg', 31),
 (175,  curdate(), 'DC', 'Cavani', 'Edinson', 'Cavani_PSG.jpg', 32),
-
-
-
-
 (176, curdate(), 'DFC', 'Bisseck', 'Yann', 'Bisseck_INT.jpg', 1),
 (177, curdate(), 'DC', 'Martinez', 'Lautaro', 'Lautaro_INT.jpg', 2),
 (178, curdate(), 'MD', 'Lazaro', 'Valentin', 'Valentin_Lazaro_INT.jpg', 3),
@@ -267,7 +238,7 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (182, curdate(), 'MCD', 'Medel', 'Gary', 'Gary_Medel_INT.jpg', 7),
 (183, curdate(), 'LD', 'Yao', 'Elonge', 'Elonge_Yao_INT.jpg', 8),
 (184, curdate(), 'DFC', 'Murillo', 'Jeison', 'Murillo_INT.jpg', 9),
-(185, curdate(), 'DC', 'Livaja', 'Marko', 'Livaja', 'Livaja_INT.jpg', 10),
+(185, curdate(), 'DC', 'Livaja', 'Marko', 'Livaja_INT.jpg', 10),
 (186, curdate(), 'MC', 'Olsen', 'Patrick', 'Patrick_Olsen_INT.jpg', 11),
 (187, curdate(), 'POR', 'Handanovic', 'Samir', 'Handanovic_INT.jpg', 12),
 (188, curdate(), 'POR', 'Martinez', 'Josep', 'Josep_Martinez_INT.jpg', 13),
@@ -280,7 +251,7 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (195,  curdate(), 'MC', 'Zielinski', 'Piotr', 'Zielinski_INT.jpg', 24),
 (196, curdate(), 'LD', 'Soares', 'Cedric', 'Soares_INT.jpg', 25),
 (197, curdate(), 'EI', 'Baldé', 'Keita', 'Keita_Balde_INT.jpg', 26),
-(198, ,curdate(), 'MCD', 'Stankovic', 'Aleksandar', 'Stankovic_INT.jpg', 27),
+(198, curdate(), 'MCD', 'Stankovic', 'Aleksandar', 'Stankovic_INT.jpg', 27),
 (199, curdate(), 'DC', 'Ibrahimovic', 'Zlatan', 'Ibra_INT.jpg', 28),
 (200, curdate(), 'POR', 'Sommer', 'Yann', 'Sommer_INT.jpg', 29),
 (201, curdate(), 'MCO', 'Calhanoglu', 'Hakan', 'Calhanoglu_INT.jpg', 30),
@@ -288,7 +259,7 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 
 
 
-
-
 (203, curdate(), 'DC', 'Füllkrug', 'Niklas', 'Fullkrug_ACN.jpg', 1),
-(204,  curdate(), 'DFC', 'Pellegrino', 'Lorenzo', 'Pellegrino_ACM.jpg', 2), 
+(204,  curdate(), 'DFC', 'Pellegrino', 'Lorenzo', 'Pellegrino_ACM.jpg', 2),
+
+(205, curdate(), 'MCD', 'Ndiaye', 'Amath', 'Amath_Ndiaye_ATM.jpg', 26);

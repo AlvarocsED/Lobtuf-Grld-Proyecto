@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bandera;
+use App\Models\Equipo;
 use App\Models\Partida;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 define ('MIN_ID_BANDERA',1);
 define ('MAX_ID_BANDERA',29);
@@ -29,7 +31,7 @@ class JuegoC extends Controller
         //Hacer save del objeto partida 
         
         //Seleccionar 3 banderas al azar
-        $arrayIDs=array();
+       /* $arrayIDs=array();
         $numBanderas=0;
         do {
             $id= rand(MIN_ID_BANDERA, MAX_ID_BANDERA);
@@ -41,28 +43,31 @@ class JuegoC extends Controller
         //REcuperar banderas elegidas
         $banderas[]=Bandera::find($arrayIDs[0]);
         $banderas[]=Bandera::find($arrayIDs[1]);
-        $banderas[]=Bandera::find($arrayIDs[2]);
+        $banderas[]=Bandera::find($arrayIDs[2]);*/
+        $banderas = DB::table('banderas')->select('*', DB::raw('rand() as num'))->orderBy('num')->limit(3)->get();
 
 
         //Seleccionar 3 equipos al azar
-        $equipos=array();
+        /*$arrayIDs=array();
         $numEscudo=0;
         do{
             $id=rand(MIN_ID_ESCUDOS, MAX_ID_ESCUDOS);
-            if(!in_array($id,$equipos)) {
-                $equipos[]=$id;
+            if(!in_array($id,$arrayIDs)) {
+                $arrayIDs[]=$id;
                 $numEscudo++;
             }
         }while($numEscudo<3);
-          $foto[]=Equipo::find($equipos[0]);
-          $foto[]=Equipo::find($equipos[1]);
-          $foto[]=Equipo::find($equipos[2]);
+          $equipos[]=Equipo::find($arrayIDs[0]);
+          $equipos[]=Equipo::find($arrayIDs[1]);
+          $equipos[]=Equipo::find($arrayIDs[2]);*/
+          $equipos = DB::table('equipos')->select('*', DB::raw('rand()  as num'))->orderBy('num')->limit(3)->get();
+
+           //Crear partida
+        return view('jugar/vistaJuegoFinal',compact('banderas','equipos'));
     }
 
 
 
-
-        //Crear partida
-        return view('jugar/vistaJuegoFinal',compact('banderas','equipos'));
-
 }
+       
+
