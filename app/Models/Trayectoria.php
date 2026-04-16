@@ -8,10 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Trayectoria extends Model
 {
     use HasFactory;
-    function bandera(){
-        return $this->belongsTo(Bandera::class, 'bandera_id', 'id');
+    function jugador(){
+        return $this->belongsTo(Jugador::class);
     }
     function equipo(){
-        return $this->belongsTo(Equipo::class, 'equipo_id', 'id');
+        return $this->belongsTo(Equipo::class);
     }
 }

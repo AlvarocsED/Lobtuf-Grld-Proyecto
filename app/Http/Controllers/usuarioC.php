@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Equipo;
+use App\Models\Jugador;
+use App\Models\Trayectoria;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -54,13 +57,27 @@ class UsuarioC extends Controller
            else{    
             return back()->with("mensaje", "Se ha producido un error en el registro");
            }
-           function salir(Request $request){
-            Auth::logout();     
-            $request->session()->invalidate();
-            $request->session()->regenerateToken();
-            return redirect(route('login'));
-           }
+           
     }
+    function salir(Request $request){
+        Auth::logout();     
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect(route('login'));
+       }
+       function prueba(){
+            $equipos = Equipo::all();
+            $jugadores = Jugador::all();
+            $t=Trayectoria::all();
+             return view('prueba',compact('equipos','jugadores','t'));
+       }
+       function insertar(Request $r){
+        $t= new Trayectoria();
+        $t->equipo_id=$r->equipo;
+        $t->jugador_id=$r->jugador;
+        $t->save();
+        return back();
+   }
     
 }
     

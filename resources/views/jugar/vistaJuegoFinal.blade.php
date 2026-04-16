@@ -35,6 +35,7 @@
   <div class="d-flex justify-content-center mt-3 gap-4">
     <input type="text" class="form-control w-50" placeholder="Escribe el jugador aquí">
     <button type="button" class="btn btn-warning">Probar</button>
+    <button type="button" class="btn btn-dark fin"><img src=" {{ asset('img/jugar/finalizar.png')}}" alt="Finalizar juego" class="fin"></button>
   </div>
 </div>
 @endsection

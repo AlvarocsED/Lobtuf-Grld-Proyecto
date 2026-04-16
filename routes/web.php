@@ -23,6 +23,8 @@ Route::controller(UsuarioC::class)->group(
         Route::post('login', 'validarLogin')->name('validarLogin');
         Route::get('registro', 'vistaRegistro')->name('vistaRegistro');
         Route::post('registro', 'crearUsuario')->name('crearUsuario');
+        Route::get('prueba', 'prueba')->name('prueba');
+        Route::post('insertar', 'insertar')->name('insertar');
        
     }
 );
