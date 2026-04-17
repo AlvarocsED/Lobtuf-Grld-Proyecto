@@ -34,6 +34,13 @@
   </table>
   <div class="d-flex justify-content-center mt-3 gap-4">
     <input type="text" class="form-control w-50" placeholder="Escribe el jugador aquí">
+    <datalist id="jugadores">
+      <option value="Cristiano Ronaldo">
+      <option value="Ronaldo Nazario">
+      <option value="Ronald Araujo">
+      <option value="Ronaldinho">
+      <option value="Vini JR.">
+    </datalist>
     <button type="button" class="btn btn-warning">Probar</button>
     <button type="button" class="btn btn-dark fin"><img src=" {{ asset('img/jugar/finalizar.png')}}" alt="Finalizar juego" class="fin"></button>
   </div>
