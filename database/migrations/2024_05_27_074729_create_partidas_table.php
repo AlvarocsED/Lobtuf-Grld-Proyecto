@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('partidas', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->enum('nivel', ['Principiante', 'Medio', 'Experto']);
             $table->integer('puntos');
             $table->integer('tiempo');
             $table->boolean('finalizado');

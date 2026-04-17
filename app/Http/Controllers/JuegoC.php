@@ -6,6 +6,7 @@ use App\Models\Bandera;
 use App\Models\Equipo;
 use App\Models\Partida;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 define ('MIN_ID_BANDERA',1);
@@ -27,6 +28,12 @@ class JuegoC extends Controller
     }
     function vistaJuegoFinal(){
         //Crear una partida nueva para el usuario logueado
+        $p = new Partida();
+        $p->user_id = Auth::user()->id;
+        $p->puntos=0;
+        $p->tiempo=0;
+        $p->finalizado=false;
+        $p->save();
         //Crear un objeto partida y rellenar los atributos
         //Hacer save del objeto partida 
         

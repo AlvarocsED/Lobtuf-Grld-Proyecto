@@ -28,15 +28,20 @@
                       <tr class="table-active">
                         <th scope="col" width="5%"><input type="checkbox" class="form-check-input"></th>
                         <th scope="col" width="45%">Partida</th>
-                        <th scope="col" width="50%">Puntuacion</th>                                                      
+                        <th scope="col" width="50%">Puntuacion</th>    
+                        <th scope="col" width="50%">Tiemmpo</th>                                                  
                       </tr>
                     </thead>
                     <tbody>
-                      <tr class="table-active">
-                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                        <td>Ejemplo partida 1</td>
-                        <td>90</td>
-                      </tr>
+                      @foreach ($partidas as $p)
+                        <tr class="table-active">
+                          <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                          <td>{{date('d/m/Y H:i:s',strtotime($p->created_at))}}</td>
+                          <td>{{($p->finalizada?$p->puntos: '-')}}</td>
+                          <td>{{$p->finalizada?$p->tiempo: '-'}}</td>
+                        </tr>
+                      @endforeach
+                      
                     </tbody>
               </table>
             </div>
