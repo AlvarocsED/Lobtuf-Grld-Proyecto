@@ -92,12 +92,7 @@
             Campo obligatorio
           </div>
         @enderror
-        <input type="checkbox" name="terms" id="terms">Acepto los <a href="{{asset('registro2/TYC.pdf')}}">terminos y condiciones</a> de la página
-        @error('terms')
-        <div class="text-danger">
-          Acepte los terminos
-        </div>
-        @enderror
+        
         </div>
         <div class="d-flex justify-content-center">
           <button type="reset" class="btn btn-danger">Cancelar</button>

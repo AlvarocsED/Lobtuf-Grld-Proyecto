@@ -4,7 +4,7 @@
 @endsection
 @section('contenido')
 <div class="container text-center">
-  <h1 class="futbol11-title">LOBTUG GRID</h1>
+  <h1 class="futbol11-title">LOBTUF GRID</h1>
 
   <table class="table grid-container table-dark table-bordered align-center">
     <thead class="grid-header">
@@ -33,13 +33,11 @@
     </tbody>
   </table>
   <div class="d-flex justify-content-center mt-3 gap-4">
-    <input type="text" class="form-control w-50" placeholder="Escribe el jugador aquí">
+    <input type="text" list="jugadores" class="form-control w-50" placeholder="Escribe el jugador aquí">
     <datalist id="jugadores">
-      <option value="Cristiano Ronaldo">
-      <option value="Ronaldo Nazario">
-      <option value="Ronald Araujo">
-      <option value="Ronaldinho">
-      <option value="Vini JR.">
+      @foreach ($jugadores as $item)
+          <option>{{$item->nombre}}</option>
+      @endforeach
     </datalist>
     <button type="button" class="btn btn-warning">Probar</button>
     <button type="button" class="btn btn-dark fin"><img src=" {{ asset('img/jugar/finalizar.png')}}" alt="Finalizar juego" class="fin"></button>

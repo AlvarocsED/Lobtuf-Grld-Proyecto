@@ -66,12 +66,7 @@
                   <div class="col-12">
                     <div class="row justify-content-between">
                       <div class="col-6">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" name="recordar" id="recordar">
-                          <label class="form-check-label text-secondary" for="recordar">
-                            Recordar Contraseña
-                          </label>
-                        </div>
+                        
                       </div>
                       </div>
                   </div>
