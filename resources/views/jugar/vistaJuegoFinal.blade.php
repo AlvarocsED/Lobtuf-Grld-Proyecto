@@ -36,7 +36,7 @@
     <input type="text" list="jugadores" class="form-control w-50" placeholder="Escribe el jugador aquí">
     <datalist id="jugadores">
       @foreach ($jugadores as $item)
-          <option>{{$item->nombre}}</option>
+          <option>{{$item->nombre, $item->apellido}}</option>
       @endforeach
     </datalist>
     <button type="button" class="btn btn-warning">Probar</button>
