@@ -32,5 +32,6 @@ Route::controller(JuegoC::class)->group(
     function(){
         Route::get('jugar', 'vistaJugar')->name('vistaJugar');
         Route::get('juego', 'vistaJuegoFinal')->name('vistaJuegoFinal');
+        Route::post('juego', 'comprobar')->name('comprobar');
     }
 );
