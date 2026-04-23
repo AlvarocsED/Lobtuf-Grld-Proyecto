@@ -58,7 +58,7 @@ class JuegoC extends Controller
         //Cargar jugadores para el datalist
         $jugadores = DB::table('jugadors')->select('id', DB::raw("concat_ws(' ', nombre, apellido)  as nombre"))->orderBy('nombre')->get();
         //Crear partida
-        return view('jugar/vistaJuegoFinal', compact('banderas', 'equipos', 'jugadores','tablero'));
+        return view('jugar/vistaJuegoFinal', compact('banderas', 'equipos', 'jugadores','tablero','p'));
     }
 
     function comprobar(Request $request)

@@ -11,9 +11,7 @@ class Jugador extends Model
     function trayectorias(){
         return $this->hasMany(Trayectoria::class, 'jugador_id', 'id');
     }
-    function solucionPreguntaS(){
-        return $this->hasMany(solucionPregunta::class, 'jugador_id', 'id');
-    }
+    
     function banderad(){
         return $this->belongsTo(Bandera::class, 'bandera_id', 'id');
     }

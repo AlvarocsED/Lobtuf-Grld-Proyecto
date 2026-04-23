@@ -11,7 +11,5 @@ class Partida extends Model
     function usuario(){
         return $this->belongsTo(User::class, 'partida_id', 'id');
     }
-    function preguntas(){
-        return $this->hasMany(Pregunta::class, 'pregunta_id', 'id');
-    }
+    
 }
