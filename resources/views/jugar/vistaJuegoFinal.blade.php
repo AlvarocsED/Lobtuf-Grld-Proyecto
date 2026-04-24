@@ -45,7 +45,7 @@
       @endforeach
     </datalist>
     <button type="button" name="probar" class="btn btn-warning" onclick="comprobar()">Probar</button>
-    <button type="button" name="acabar" class="btn btn-dark fin"><img src=" {{ asset('img/jugar/finalizar.png')}}" alt="Finalizar juego" class="fin"></button>
+    <button type="button" name="acabar" class="btn btn-dark fin" onclick="acabar()"><img src=" {{ asset('img/jugar/finalizar.png')}}" alt="Finalizar juego" class="fin"></button>
   </div>
   <div id="mensaje" class="mt-3 fw-bold text-danger"></div>
 </div>
@@ -75,6 +75,7 @@
   // =========================
   function comprobar(){
     const t = @json($tablero);
+    console.log(t);
     const jugador = document.getElementById('id_jugador').value;
     const mensaje = document.getElementById('mensaje');
   
@@ -123,7 +124,7 @@
   
     // COMPROBAR SI TERMINA SOLO
     if(comprobarFin()){
-      acabar();
+      finjuego();
     }
   }
   
@@ -132,61 +133,56 @@
   // COMPROBAR FIN DEL JUEGO
   // =========================
   function comprobarFin(){
-    const t = @json($tablero);
-  
     for(let i=0;i<3;i++){
       for(let j=0;j<3;j++){
-  
         let celda = document.getElementById(`celda-${i}-${j}`);
-  
-        if(t[i][j] != 'X' && t[i][j].length > 0){
-          if(celda.textContent.trim() == '-'){
+        if(celda.innerHTML == '-'){
+          
             return false;
-          }
         }
       }
     }
-  
     return true;
   }
   
-  
+
   // =========================
   // FINALIZAR JUEGO
   // =========================
   function acabar(){
     const t = @json($tablero);
-  
     // RELLENAR CASILLAS VACÍAS
     for(let i=0;i<3;i++){
       for(let j=0;j<3;j++){
+        if(t[i][j] != 'X'){
+          let celda = document.getElementById(`celda-${i}-${j}`);
   
-        let celda = document.getElementById(`celda-${i}-${j}`);
+          // ⛔ no modificar si está bloqueada
+          if(!celda.classList.contains("bloqueada")){
   
-        if(celda.textContent.trim() == '-'){
+            let encontrado = t[i][j][0];
   
-          if(t[i][j] != 'X' && t[i][j].length > 0){
+            if(encontrado){
+              celda.innerHTML = `
+                <img src="img/jugadorEquipo/${encontrado.foto}" 
+                style="width:70px; height:70px; object-fit:cover;">`;
   
-            let jugador = t[i][j][Math.floor(Math.random() * t[i][j].length)];
-  
-            celda.innerHTML = `
-              <img src="img/jugadorEquipo/${jugador.foto}" 
-              style="width:70px; height:70px; object-fit:cover;">`;
-  
-                     celda.classList.add("bloqueada");
+              celda.classList.add("bloqueada");
+            }
           }
         }
       }
     }
-  
-    // OCULTAR CONTROLES
-    document.getElementById('zona-controles').style.display = 'none';
-  
-    // MOSTRAR MENSAJE FINAL
-    const mensajeFinal = document.getElementById('mensaje-final');
-    mensajeFinal.innerText = "¡¡Has acabado!!";
-    mensajeFinal.style.display = 'block';
+    finjuego();
   }
+  function finjuego(){
+     // OCULTAR CONTROLES
+     document.getElementById('zona-controles').style.display = 'none';
   
+      // MOSTRAR MENSAJE FINAL
+      const mensajeFinal = document.getElementById('mensaje');
+      mensajeFinal.innerHTML = "¡¡Has acabado!!";
+      mensajeFinal.style.display = 'block';
+  }
   </script>
 @endsection

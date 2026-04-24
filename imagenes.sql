@@ -90,7 +90,7 @@ insert into jugadors(id,created_at,posicion,apellido,nombre,foto,bandera_id) val
 (38, curdate(), 'LD', 'Odriozola', 'Álvaro', 'Odriozola_BAY', 13),
 (39, curdate(), 'MCO', 'Donovan', 'Landon', 'Landon_Donovan_BAY.jpg', 14),
 (40, curdate(), 'LD', 'Boey', 'Nathan', 'Boey_BAY.jpg', 15),
-(41, curdate(), 'DC', 'Kane', 'Harry', 'Kane_BAY', 18),
+(41, curdate(), 'DC', 'Kane', 'Harry', 'Kane_BAY.jpg', 18),
 (42, curdate(), 'DC', 'Toni', 'Luca', 'Luca_Toni_BAY.jpg', 20),
 (43, curdate(), 'DFC', 'Benatia', 'Medhi', 'Benatia_BAY.jpg', 21),
 (44, curdate(), 'MC', 'Gravenberch', 'Ryan', 'Gravenberch_BAY', 24),
