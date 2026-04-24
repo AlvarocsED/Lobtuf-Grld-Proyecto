@@ -50,13 +50,18 @@
   <div id="mensaje" class="mt-3 fw-bold text-danger"></div>
 </div>
 <script>
-  //Rellenar el campo del id del jugador escrito en datalist
+
+  // =========================
+  // AUTOCOMPLETAR ID JUGADOR
+  // =========================
   const input = document.getElementById('nombre_jugador');
   const hidden = document.getElementById('id_jugador');
-  const dl = document.querySelectorAll('#jugadores option')
+  const dl = document.querySelectorAll('#jugadores option');
+  
   input.addEventListener('input',()=>{
     const valor = input.value;
-     hidden.value = '';
+    hidden.value = '';
+  
     dl.forEach(element => {
       if(element.value == valor){
         hidden.value = element.dataset.id;
@@ -64,50 +69,124 @@
     });
   });
   
+  
+  // =========================
+  // COMPROBAR JUGADOR
+  // =========================
   function comprobar(){
-  const t = @json($tablero);
-  const jugador = document.getElementById('id_jugador').value;
-  const input = document.getElementById('nombre_jugador');
-  const hidden = document.getElementById('id_jugador');
-  const mensaje = document.getElementById('mensaje');
-
-  let acierto = false; // 👈 clave
-
-  if(!jugador){
-    mensaje.innerText = "Introduce un jugador válido";
-    return;
-  }
-
-  for(let i=0;i<3;i++){
-    for(let j=0;j<3;j++){
-      if(t[i][j] != 'X'){ 
-        let celda = document.getElementById(`celda-${i}-${j}`);
-
-        if(celda.innerHTML=='-'){
-          let encontrado = t[i][j].find(ju => ju.id == jugador);
-
-          if(encontrado){
-            celda.innerHTML = `
-              <img src="img/jugadorEquipo/${encontrado.foto}" 
-              style="width:70px; height:70px; object-fit:cover;">`;
-
-            acierto = true; // 👈 MARCAMOS QUE HA ACERTADO
+    const t = @json($tablero);
+    const jugador = document.getElementById('id_jugador').value;
+    const mensaje = document.getElementById('mensaje');
+  
+    let acierto = false;
+  
+    if(!jugador){
+      mensaje.innerText = "Introduce un jugador válido";
+      return;
+    }
+  
+    for(let i=0;i<3;i++){
+      for(let j=0;j<3;j++){
+  
+        if(t[i][j] != 'X'){
+          let celda = document.getElementById(`celda-${i}-${j}`);
+  
+          // ⛔ no modificar si está bloqueada
+          if(!celda.classList.contains("bloqueada")){
+  
+            let encontrado = t[i][j].find(ju => ju.id == jugador);
+  
+            if(encontrado){
+              celda.innerHTML = `
+                <img src="img/jugadorEquipo/${encontrado.foto}" 
+                style="width:70px; height:70px; object-fit:cover;">`;
+  
+              celda.classList.add("bloqueada");
+  
+              acierto = true;
+            }
           }
         }
       }
     }
+  
+    // LIMPIAR INPUT
+    input.value = '';
+    hidden.value = '';
+  
+    // MENSAJE ERROR
+    if(!acierto){
+      mensaje.innerText = "Ese jugador no encaja en ninguna casilla";
+    } else {
+      mensaje.innerText = "";
+    }
+  
+    // COMPROBAR SI TERMINA SOLO
+    if(comprobarFin()){
+      acabar();
+    }
   }
-
-  // 🧹 LIMPIAR INPUT SIEMPRE
-  input.value = '';
-  hidden.value = '';
-
-  // ❌ MENSAJE SI NO ACIERTA
-  if(!acierto){
-    mensaje.innerText = "Ese jugador no encaja en ninguna casilla";
-  } else {
-    mensaje.innerText = "";
+  
+  
+  // =========================
+  // COMPROBAR FIN DEL JUEGO
+  // =========================
+  function comprobarFin(){
+    const t = @json($tablero);
+  
+    for(let i=0;i<3;i++){
+      for(let j=0;j<3;j++){
+  
+        let celda = document.getElementById(`celda-${i}-${j}`);
+  
+        if(t[i][j] != 'X' && t[i][j].length > 0){
+          if(celda.textContent.trim() == '-'){
+            return false;
+          }
+        }
+      }
+    }
+  
+    return true;
   }
-}
-</script>
+  
+  
+  // =========================
+  // FINALIZAR JUEGO
+  // =========================
+  function acabar(){
+    const t = @json($tablero);
+  
+    // RELLENAR CASILLAS VACÍAS
+    for(let i=0;i<3;i++){
+      for(let j=0;j<3;j++){
+  
+        let celda = document.getElementById(`celda-${i}-${j}`);
+  
+        if(celda.textContent.trim() == '-'){
+  
+          if(t[i][j] != 'X' && t[i][j].length > 0){
+  
+            let jugador = t[i][j][Math.floor(Math.random() * t[i][j].length)];
+  
+            celda.innerHTML = `
+              <img src="img/jugadorEquipo/${jugador.foto}" 
+              style="width:70px; height:70px; object-fit:cover;">`;
+  
+                     celda.classList.add("bloqueada");
+          }
+        }
+      }
+    }
+  
+    // OCULTAR CONTROLES
+    document.getElementById('zona-controles').style.display = 'none';
+  
+    // MOSTRAR MENSAJE FINAL
+    const mensajeFinal = document.getElementById('mensaje-final');
+    mensajeFinal.innerText = "¡¡Has acabado!!";
+    mensajeFinal.style.display = 'block';
+  }
+  
+  </script>
 @endsection
