@@ -84,4 +84,19 @@ class JuegoC extends Controller
         }
         return $resultado;
     }
+    function actualizarTiempo(Request $request){
+
+        try {
+            //Validar que pasamos el id de la partida
+            $request->validate(['id'=>'required']);
+           $partida = Partida::find($request->id);
+           if($partida!=null){
+                $partida->fin = true;
+                $partida->tiempo= time()-strtotime($partida->created_at);//Tiempo en minutos.
+                $partida->save();
+           }
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
 }

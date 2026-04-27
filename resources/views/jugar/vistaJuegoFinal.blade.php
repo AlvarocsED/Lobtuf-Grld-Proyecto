@@ -50,7 +50,7 @@
   <div id="mensaje" class="mt-3 fw-bold text-danger"></div>
 </div>
 <script>
-
+let puntuacion = 0;
   // =========================
   // AUTOCOMPLETAR ID JUGADOR
   // =========================
@@ -133,18 +133,26 @@
   // COMPROBAR FIN DEL JUEGO
   // =========================
   function comprobarFin(){
-    for(let i=0;i<3;i++){
-      for(let j=0;j<3;j++){
+  const t = @json($tablero);
+
+  for(let i=0;i<3;i++){
+    for(let j=0;j<3;j++){
+
+      // SOLO casillas jugables
+      if(t[i][j] != 'X'){
+
         let celda = document.getElementById(`celda-${i}-${j}`);
-        if(celda.innerHTML == '-'){
-          
-            return false;
+
+        // Si alguna NO está bloqueada → no ha terminado
+        if(!celda.classList.contains("bloqueada")){
+          return false;
         }
       }
     }
-    return true;
   }
-  
+
+  return true;
+}
 
   // =========================
   // FINALIZAR JUEGO
@@ -176,13 +184,37 @@
     finjuego();
   }
   function finjuego(){
-     // OCULTAR CONTROLES
-     document.getElementById('zona-controles').style.display = 'none';
-  
-      // MOSTRAR MENSAJE FINAL
-      const mensajeFinal = document.getElementById('mensaje');
-      mensajeFinal.innerHTML = "¡¡Has acabado!!";
-      mensajeFinal.style.display = 'block';
-  }
+  //Llamar a la ruta que marca la partida finalizada y actualiza el tiempo  
+  fetch("{{ route('finTiempo') }}", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRF-TOKEN": "{{ csrf_token() }}"
+    },
+    body: JSON.stringify({
+      id: {{$p->id}}
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error("Error:", error);
+  });
+
+
+  const zona = document.getElementById('zona-controles');
+
+  console.log("FIN JUEGO", zona); // debug
+
+  zona.classList.add('d-none'); // 🔥 mejor que display:none
+
+  const mensajeFinal = document.getElementById('mensaje');
+  mensajeFinal.classList.remove("text-danger");
+  mensajeFinal.classList.add("text-success");
+  mensajeFinal.innerHTML = "¡¡Has acabado!! Has obtenido ${puntuacion}pts";
+  enviarFinal();
+}
   </script>
 @endsection

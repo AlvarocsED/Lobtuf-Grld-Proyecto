@@ -1,40 +1,5 @@
-- Revisar modelos, hay que quitar todo lo de preguntas y solucion. Quitar clases y relaciones que haya
 
-- Limpiar el campo del jugador cada vez que se compruebe
-
-- Implementar el botón de reslver todo
 
 - DOCUMENTACIÓN!!!!!
 
-  function comprobar(){
-    const t = @json($tablero);
-    console.log(t)
-    // Id el jugador que ha seleccionado el usuario
-    const jugador = document.getElementById('id_jugador').value;
-    if(!jugador){
-      alert('Introduce jugador');
-    }
-    else{
-      for(i=0;i<3;i++){
-          for(j=0;j<3;j++){
-              if(t[i][j] != 'X'){ // Ejemplo: casilla válida
-                  let celda = document.getElementById(`celda-${i}-${j}`);
-                  if(celda.innerHTML=='-'){
-                      //COMPROBAR SI EL CÓDIGO DEL JUGADOR SELECCIONADO POR EL USUARIO ESTÁ
-                      //ENTRE LOS JUGADORES DE ESA POSICIÓN DEL TABLERO
-                      encontrado = t[i][j].find(ju => ju.id==jugador)
-                      if(encontrado){
-                          celda.innerHTML = `
-                            <img src="img/jugadorEquipo/${encontrado.foto}" 
-                                style="width:70px; height:70px; object-fit:cover;">`;
-                          //Añadir puntos +10
-                        }
-                      else{
-                        //Restar puntos - 5
-                      }
-                    }
-              }
-          }
-      }
-  }
-}
+  
