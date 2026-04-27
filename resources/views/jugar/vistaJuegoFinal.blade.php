@@ -50,7 +50,7 @@
   <div id="mensaje" class="mt-3 fw-bold text-danger"></div>
 </div>
 <script>
-let puntuacion = 0;
+
   // =========================
   // AUTOCOMPLETAR ID JUGADOR
   // =========================
@@ -205,16 +205,13 @@ let puntuacion = 0;
 
 
   const zona = document.getElementById('zona-controles');
-
+  zona.classList.add("d-none");
   console.log("FIN JUEGO", zona); // debug
-
-  zona.classList.add('d-none'); // 🔥 mejor que display:none
-
   const mensajeFinal = document.getElementById('mensaje');
   mensajeFinal.classList.remove("text-danger");
   mensajeFinal.classList.add("text-success");
-  mensajeFinal.innerHTML = "¡¡Has acabado!! Has obtenido ${puntuacion}pts";
-  enviarFinal();
+  mensajeFinal.innerHTML = "¡¡Has acabado!!";
+
 }
   </script>
 @endsection
