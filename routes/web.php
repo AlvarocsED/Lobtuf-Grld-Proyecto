@@ -34,5 +34,7 @@ Route::controller(JuegoC::class)->group(
         Route::get('juego', 'vistaJuegoFinal')->name('vistaJuegoFinal');
         Route::post('juego', 'comprobar')->name('comprobar');
         Route::put('tiempo','actualizarTiempo')->name('finTiempo');
+        Route::put('puntos','actualizarPuntos')->name('puntos');
+        Route::get('comprobar','comprobarIMG')->name('comprobar');
     }
 );

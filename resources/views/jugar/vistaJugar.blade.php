@@ -29,7 +29,7 @@
                         <th scope="col" width="5%"><input type="checkbox" class="form-check-input"></th>
                         <th scope="col" width="45%">Partida</th>
                         <th scope="col" width="50%">Puntuacion</th>    
-                        <th scope="col" width="50%">Tiemmpo</th>                                                  
+                        <th scope="col" width="50%">Tiempo</th>                                                  
                       </tr>
                     </thead>
                     <tbody>
@@ -37,8 +37,8 @@
                         <tr class="table-active">
                           <th scope="row"><input type="checkbox" class="form-check-input"></th>
                           <td>{{date('d/m/Y H:i:s',strtotime($p->created_at))}}</td>
-                          <td>{{($p->finalizada?$p->puntos: '-')}}</td>
-                          <td>{{$p->finalizada?$p->tiempo: '-'}}</td>
+                          <td>{{($p->finalizado?$p->puntos: '-')}}</td>
+                          <td>{{$p->finalizado?date('H:i:s', $p->tiempo): '-'}}</td>
                         </tr>
                       @endforeach
                       

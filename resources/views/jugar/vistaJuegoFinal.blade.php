@@ -1,11 +1,11 @@
 @extends('plantilla')
 @section('titulo')
-    Juego
+    Lobtuf grid
 @endsection
 @section('contenido')
 <div class="container text-center">
   <h1 class="futbol11-title">LOBTUF GRID</h1>
-
+  <h4 id="score" class="text-info">Puntuación</h4>
   <table class="table grid-container table-dark table-bordered align-center">
     <thead class="grid-header">
       <tr>
@@ -50,7 +50,7 @@
   <div id="mensaje" class="mt-3 fw-bold text-danger"></div>
 </div>
 <script>
-
+  let puntuacion = {{$p->puntos}};
   // =========================
   // AUTOCOMPLETAR ID JUGADOR
   // =========================
@@ -103,14 +103,20 @@
                 style="width:70px; height:70px; object-fit:cover;">`;
   
               celda.classList.add("bloqueada");
-  
+              
               acierto = true;
             }
           }
         }
       }
     }
-  
+   if (acierto) {
+      puntuacion+=10;
+    }else{
+      puntuacion-=5;
+    }
+
+    actualizarScore();
     // LIMPIAR INPUT
     input.value = '';
     hidden.value = '';
@@ -197,10 +203,10 @@
   })
   .then(res => res.json())
   .then(data => {
-    console.log(data);
+    console.log(data)
   })
   .catch(error => {
-    console.error("Error:", error);
+    console.error("Error:", error)
   });
 
 
@@ -212,6 +218,28 @@
   mensajeFinal.classList.add("text-success");
   mensajeFinal.innerHTML = "¡¡Has acabado!!";
 
+}
+function actualizarScore(){
+  //Llamar a la ruta que marca la partida finalizada y actualiza el tiempo  
+  fetch("{{ route('puntos') }}", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      "X-CSRF-TOKEN": "{{ csrf_token() }}"
+    },
+    body: JSON.stringify({
+      id: {{$p->id}},
+      puntos:puntuacion
+    })
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log(data)
+  })
+  .catch(error => {
+    console.error("Error:", error)
+  });
+  document.getElementById("score").innerText = "Puntuación: " + puntuacion;
 }
   </script>
 @endsection

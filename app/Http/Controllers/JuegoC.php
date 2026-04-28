@@ -91,12 +91,41 @@ class JuegoC extends Controller
             $request->validate(['id'=>'required']);
            $partida = Partida::find($request->id);
            if($partida!=null){
-                $partida->fin = true;
+                $partida->finalizado = true;
                 $partida->tiempo= time()-strtotime($partida->created_at);//Tiempo en minutos.
                 $partida->save();
+                return response()->json([
+                    'ok' => true,
+                    'mensaje' => 'Partida finalizada'
+                ]);
            }
         } catch (\Throwable $th) {
             throw $th;
         }
+    }
+    function actualizarPuntos(Request $request){
+
+        try {
+            //Validar que pasamos el id de la partida
+           $request->validate(['id'=>'required','puntos'=>'required']);
+           $partida = Partida::find($request->id);
+           if($partida!=null){
+                $partida->puntos = $request->puntos;
+                $partida->save();
+                return response()->json([
+                    'ok' => true,
+                    'mensaje' => 'Puntos actualizados'
+                ]);
+           }
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+    }
+
+    function comprobarIMG(){
+        $banderas = Bandera::all();
+        $equipos = Equipo::all();
+        $jugadores = Jugador::all();
+        
     }
 }
